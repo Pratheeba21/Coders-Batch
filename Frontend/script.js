@@ -4,7 +4,7 @@ const add_btn = document.getElementById("add_btn");
 
 const task_list = document.getElementById("task_list");
 
-const API_URL = "http://localhost:3000/todolist";
+const API_URL = "https://todolist-app-backend-zgvh.onrender.com/todolist";
 
 window.addEventListener("DOMContentLoaded", function(){
   fetch(API_URL)

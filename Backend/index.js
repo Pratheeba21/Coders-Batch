@@ -14,10 +14,19 @@ app.use(express.json());
 //cors
 app.use(cors());
 
+
+// mongodb+srv://TodoListApplication:todolistapp12345@cluster0.ixnufht.mongodb.net/Todolistapp?appName=Cluster0
+
 mongoose
-.connect("mongodb://localhost:27017/Todolistapp")
-.then( () => {console.log("MongoDB Connected!")} )
-.catch( (e) => {console.log(e)} );
+  .connect(
+    "mongodb+srv://TodoListApplication:todolistapp12345@cluster0.ixnufht.mongodb.net/Todolistapp?appName=Cluster0",
+  )
+  .then(() => {
+    console.log("MongoDB Connected!");
+  })
+  .catch((e) => {
+    console.log(e);
+  });
 
 ///get route
 app.get("/todolist", async (req, res) => {
@@ -48,9 +57,9 @@ app.delete("/todolist/:id", async (req, res) => {
     res.json({message: "deleted"});
 });
 
-
+const PORT = process.env.PORT || 3000;
 //start server
-app.listen(3000, () => console.log("Server has started at port 3000!"));
+app.listen(PORT, () => console.log("Server has started at port 3000!"));
 
 
 
