@@ -11,4 +11,13 @@ const todoSchema = mongoose.Schema({
 module.exports = mongoose.model("todolist", todoSchema);
 
 
-() => res.json();
+
+//task = {
+//_id: 572672yuhjhj789
+//task : task 1
+//status: false
+//}
+
+//task._id = 572672yuhjhj789
+//task.task = task 1
+//task.status = fasle
